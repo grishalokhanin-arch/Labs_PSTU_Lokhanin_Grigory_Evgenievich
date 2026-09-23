@@ -1,0 +1,12 @@
+File.txt
+*.txt
+docs/
+*.o
+*.mp4
+*.doc
+*.docx
+*.zip
+*.pptx
+*.pdf
+*.pt
+*.exe
