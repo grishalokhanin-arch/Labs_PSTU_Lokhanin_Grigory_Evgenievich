@@ -17,7 +17,7 @@ int main(){
     i = 3*a*b*b; // 3ab^2
     j = b*b*b; // b^3
 
-    k = j - i; // Итоговое значение
+    k = j - i;
 
     l = h/k;
     std::cout << std::fixed << l;
