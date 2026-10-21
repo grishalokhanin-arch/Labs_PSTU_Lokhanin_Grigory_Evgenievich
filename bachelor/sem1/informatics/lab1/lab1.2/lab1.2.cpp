@@ -9,8 +9,8 @@ int main()
     cout << "n, m: ";
     cin >> n >> m;
 
-    cout << endl << "1: -m - ++n" << endl;
-    cout << ": " << -m - ++n << endl;
+    cout << endl << "1:- -m - ++n" << endl;
+    cout << ": " << - -m - ++n << endl;
     cout << "n = " << n << ", m = " << m << endl;
     
     cout << endl << "2: m * n < n++" << endl;
