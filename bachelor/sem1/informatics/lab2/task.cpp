@@ -22,3 +22,5 @@ int main()
     cout << "кол-во членов =  " << n - 1 << endl;
     return 0;
 }
+
+
