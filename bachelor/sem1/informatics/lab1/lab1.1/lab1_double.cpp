@@ -1,25 +1,31 @@
-#include <cmath> //подключаем библиотеку для математических вычеслений
-#include <iostream> //библиотека для ввода и вывода
-int main(){
-    double a, b, c, d, e, f, g, h, i, j, k, l;
-    a = 1000.0;
-    b = 0.0001;
+#include <iostream>
+using namespace std;
+
+int main() {
+    const int N = 6;
+    int A[N] = {6, 9, 12, 7, 1, -2};
     
-    c = a-b; // (a - b)
-    d = c*c*c; // (a - b)^3
+    int i = -1;
+    int j = -1;
 
-    e = a*a*a; // a^3
-    f = 3*a*a*b; // 3a^2b
-    g = e - f; // (a^3 - 3a^2b)
+    // Тот самый ЕДИНСТВЕННЫЙ цикл для поиска и обмена
+    for (int idx = 0; idx < N; idx++) {
+        if (A[idx] == 9) i = idx;
+        if (A[idx] == 7) j = idx;
+        
+        // Если оба индекса найдены — меняем числа и убиваем цикл
+        if (i != -1 && j != -1) {
+            int t = A[i];
+            A[i] = A[j];
+            A[j] = t;
+        }
+    }
 
-    h = d - g; // (a-b)^3 - (a^3 - 3a^2b)
+    // Просто выводим результат, чтобы убедиться, что всё сработало
+    for (int idx = 0; idx < N; idx++) {
+        cout << A[idx] << " ";
+    }
+    cout << endl;
 
-    i = 3*a*b*b; // 3ab^2
-    j = b*b*b; // b^3
-
-    k = j - i;
-
-    l = h/k;
-    std::cout << std::fixed << l;
-    return 0; //возврат значения 0
+    return 0;
 }
